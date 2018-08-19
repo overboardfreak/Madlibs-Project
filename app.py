@@ -15,7 +15,5 @@ def formhandler():
 	new_para = para.replace(old,new)
 	return {"para" : new_para}				
 
-if os.environ.get('APP_LOCATION') == "heroku":
-	run(host='0.0.0.0', port=int(os.environ.get("PORT",5000)))					#opens it to the network
-else:
-	run(host='localhost', port=8080)
+
+run(host='0.0.0.0', port=int(os.environ.get("PORT",5000)))					#opens it to the network
